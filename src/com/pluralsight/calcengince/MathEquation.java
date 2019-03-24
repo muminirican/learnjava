@@ -3,11 +3,11 @@ package com.pluralsight.calcengince;
 public class MathEquation {
     public double leftVal;
     public double rightVal;
-    public char opcode;
+    public char opCode;
     public double result;
 
     public void execute(){
-        switch(opcode) {
+        switch(opCode) {
             case 'a':
                 result = leftVal + rightVal;
                 break;
@@ -21,7 +21,7 @@ public class MathEquation {
                 result = leftVal * rightVal;
                 break;
             default:{
-                System.out.println("Error - invalid opcode");
+                System.out.println("Error - invalid opCode");
                 result = 0.0d;
                 break;}
         }
