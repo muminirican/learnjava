@@ -13,16 +13,16 @@ public class Main {
         for(MathEquation equation : equations) { //this is a special type of for which is there in Java
             equation.execute(); // this one sets the "result" member of the MathEquation Class
             System.out.println("result = ");
-            System.out.println(equation.result);
+            System.out.println(equation.getResult());
 
         }
     }
     // create a new method inside the Main Class
     public static MathEquation create(double leftVal, double rightVal, char opCode){
         MathEquation equation = new MathEquation();
-        equation.leftVal = leftVal;
-        equation.rightVal = rightVal;
-        equation.opCode = opCode;
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
 
         return equation;
     }
