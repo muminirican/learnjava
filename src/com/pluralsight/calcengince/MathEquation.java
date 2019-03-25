@@ -29,13 +29,25 @@ public class MathEquation {
         this.opCode = opCode;
     }
 
-    private char opCode;
+    private char opCode = 'a';
 
     public double getResult() {
         return result;
     }
 
     private double result;
+
+    public MathEquation(){}
+
+    public MathEquation(char opCode){
+        this.opCode = opCode;
+    }
+
+    public MathEquation (char opCode, double leftVal, double rightVal){
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
 
     public void execute(){
         switch(opCode) {
