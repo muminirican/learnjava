@@ -21,6 +21,18 @@ public class Main {
             System.out.println(equation.getResult());
 
         }
+
+        System.out.println();
+        System.out.println("using overloads");
+        System.out.println();
+
+        double leftDouble = 9.0d;
+        double rightDouble = 4.0d;
+
+        MathEquation equationOverload = new MathEquation('d');
+        equationOverload.execute(leftDouble, rightDouble);
+        System.out.println("result = ");
+        System.out.println(equationOverload.getResult());
     }
     // create a new method inside the Main Class
     //public static MathEquation create(double leftVal, double rightVal, char opCode){
@@ -31,6 +43,8 @@ public class Main {
 //
     //    return equation;
     //}
+
+
 }
 
 
