@@ -57,6 +57,9 @@ public class Main {
         System.out.println();
 
         String[] statements = {
+                "add 1.0",
+                "add xx 1.0",
+                "addX 0.0 0.0",
                 "divide 100.0 50.0",
                 "add 25.0 92.0",
                 "subtract 225.0 17.0",
@@ -65,8 +68,14 @@ public class Main {
 
         CalculateHelper helper = new CalculateHelper();
         for(String statement: statements){
-            helper.process(statement);
-            System.out.println(helper.toString());
+            try {
+                helper.process(statement);
+                System.out.println(helper.toString());
+            } catch (InvalidStatementException e){
+                System.out.println(e.getMessage());
+                if(e.getCause() != null)
+                    System.out.println("  Original exception: " + e.getCause().getMessage());
+            }
         }
     }
     // create a new method inside the Main Class
